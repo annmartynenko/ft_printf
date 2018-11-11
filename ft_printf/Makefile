@@ -34,10 +34,10 @@ $(NAME):
 	ar rc $(NAME) $(OUT)
 
 clean:
-	rm -f *.o
+	/bin/rm -f *.o
+	/bin/rm -f *~
 
-fclean:
-	rm -f *.o
-	rm -f $(NAME)
+fclean: clean
+	/bin/rm -f $(NAME)
 
 re: fclean all
