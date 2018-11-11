@@ -24,14 +24,16 @@ FLAGS = -Wall -Wextra -Werror
 
 OUT = $(SRC:.c=.o)
 
-all: $(NAME)
+.PHONY: all clean fclean re
 
-%o.:%.c $(HDR)
-	gcc $(FLAGS) -o $@ $<
+all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRC)
 	ar rc $(NAME) $(OUT)
+
+%o.:%.c
+	gcc $(FLAGS) -o $<
 
 clean:
 	/bin/rm -f *.o
