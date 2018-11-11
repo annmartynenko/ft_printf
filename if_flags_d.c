@@ -29,7 +29,7 @@ void			if_flags_d2(t_struct *flags, int *len, int *len_res)
 		}
 		n_time(((*flags).width - (*len)), len_res, '0');
 	}
-	if ((*flags).width > (*len) && !(*flags).nul && (*flags).plus != 100 &&\
+	else if ((*flags).width > (*len) && !(*flags).nul && (*flags).plus != 100 &&\
 	!(*flags).minus && (*flags).precision == -1)
 	{
 		if ((*flags).plus)
@@ -79,7 +79,7 @@ void			if_flags_d4(t_struct *flags, int *len, int *len_res)
 			(*len_res) += ft_putchar(' ');
 		n_time(((*flags).precision - (*len)), len_res, '0');
 	}
-	if ((*flags).width > (*len) && (*flags).nul && !(*flags).minus)
+	else if ((*flags).width > (*len) && (*flags).nul && !(*flags).minus)
 	{
 		if ((*flags).space)
 		{
