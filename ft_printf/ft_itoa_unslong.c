@@ -52,7 +52,7 @@ unsigned long *j)
 }
 
 int		ft_itoa_unslong(unsigned long n, unsigned long base, int letter,\
-a_struct flags)
+t_struct flags)
 {
 	unsigned int	len;
 	unsigned long	nb;

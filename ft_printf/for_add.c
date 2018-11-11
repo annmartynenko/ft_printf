@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	for_h(char format, va_list ap, a_struct flags, int *len_res)
+void	for_h(char format, va_list ap, t_struct flags, int *len_res)
 {
 	if (format == 'x')
 		*len_res += ft_itoa_unslong((unsigned short)va_arg(ap, int), 16, LOW,\
@@ -36,7 +36,7 @@ void	for_h(char format, va_list ap, a_struct flags, int *len_res)
 		ft_putlnbr(va_arg(ap, long int), flags, len_res);
 }
 
-void	for_l(char format, va_list ap, a_struct flags, int *len_res)
+void	for_l(char format, va_list ap, t_struct flags, int *len_res)
 {
 	if (format == 'x')
 		*len_res += ft_itoa_unslong(va_arg(ap, unsigned long), 16, LOW, flags);
@@ -61,7 +61,7 @@ void	for_l(char format, va_list ap, a_struct flags, int *len_res)
 		(*len_res) += ft_itoa_base(va_arg(ap, long long), 16, P, flags);
 }
 
-void	for_ll(char format, va_list ap, a_struct flags, int *len_res)
+void	for_ll(char format, va_list ap, t_struct flags, int *len_res)
 {
 	if (format == 'd' || format == 'i')
 		ft_putnumber(va_arg(ap, long long), flags, len_res);
@@ -84,7 +84,7 @@ void	for_ll(char format, va_list ap, a_struct flags, int *len_res)
 		ft_putlnbr(va_arg(ap, long int), flags, len_res);
 }
 
-void	for_hh(char format, va_list ap, a_struct flags, int *len_res)
+void	for_hh(char format, va_list ap, t_struct flags, int *len_res)
 {
 	if (format == 'd' || format == 'i')
 		ft_putschar((signed char)va_arg(ap, int), flags, len_res);

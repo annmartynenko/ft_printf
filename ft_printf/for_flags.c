@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	for_minus(a_struct flags, int len, int base, int *len_res)
+void	for_minus(t_struct flags, int len, int base, int *len_res)
 {
 	int dot;
 
@@ -30,7 +30,7 @@ void	for_minus(a_struct flags, int len, int base, int *len_res)
 	}
 }
 
-int		print_space(a_struct flags, int len, int base, int letter)
+int		print_space(t_struct flags, int len, int base, int letter)
 {
 	int len_res;
 
@@ -58,7 +58,7 @@ int		print_space(a_struct flags, int len, int base, int letter)
 	return (len_res);
 }
 
-int		print_nul(a_struct flags, int len, int base, int letter)
+int		print_nul(t_struct flags, int len, int base, int letter)
 {
 	int len_res;
 
@@ -84,7 +84,7 @@ int		print_nul(a_struct flags, int len, int base, int letter)
 	return (len_res);
 }
 
-int		print_nul_pr(a_struct flags, int len, int base, int letter)
+int		print_nul_pr(t_struct flags, int len, int base, int letter)
 {
 	int len_res;
 

@@ -83,7 +83,7 @@ int		four_bin(unsigned int numb)
 	return (4);
 }
 
-void	unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
+void	unicode(wchar_t numb, t_struct flags, int mark, int *len_res)
 {
 	int				size;
 	int				len;

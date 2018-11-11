@@ -50,7 +50,7 @@ uintmax_t *j)
 	return (len);
 }
 
-int		ft_itoa_max(uintmax_t n, uintmax_t base, int letter, a_struct flags)
+int		ft_itoa_max(uintmax_t n, uintmax_t base, int letter, t_struct flags)
 {
 	unsigned int		len;
 	uintmax_t			nb;

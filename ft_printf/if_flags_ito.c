@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		flags_ito2(a_struct flags, int len, int base, int letter)
+int		flags_ito2(t_struct flags, int len, int base, int letter)
 {
 	int len_res;
 
@@ -35,7 +35,7 @@ int		flags_ito2(a_struct flags, int len, int base, int letter)
 	return (len_res);
 }
 
-int		if_flags_ito(a_struct flags, int len, int base, int letter)
+int		if_flags_ito(t_struct flags, int len, int base, int letter)
 {
 	int len_res;
 

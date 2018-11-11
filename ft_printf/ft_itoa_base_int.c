@@ -51,7 +51,7 @@ unsigned int *j)
 }
 
 int		ft_itoa_base_int(unsigned int n, unsigned int base, int letter,\
-a_struct flags)
+t_struct flags)
 {
 	unsigned int	len;
 	unsigned int	nb;

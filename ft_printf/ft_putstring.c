@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	flags_string(a_struct flags, int *len_res, int len)
+void	flags_string(t_struct flags, int *len_res, int len)
 {
 	if (flags.width > len && !flags.minus && flags.precision == -1 &&\
 		flags.nul)
@@ -38,7 +38,7 @@ void	flags_string(a_struct flags, int *len_res, int len)
 	}
 }
 
-void	flags_string_after(a_struct flags, int *len_res, int len)
+void	flags_string_after(t_struct flags, int *len_res, int len)
 {
 	if (flags.width > len && flags.minus && flags.precision == -1)
 		n_time((flags.width - len), len_res, ' ');
@@ -51,7 +51,7 @@ void	flags_string_after(a_struct flags, int *len_res, int len)
 	}
 }
 
-void	ft_putstring(char const *s, a_struct flags, int *len_res)
+void	ft_putstring(char const *s, t_struct flags, int *len_res)
 {
 	int i;
 	int len;
@@ -76,7 +76,7 @@ void	ft_putstring(char const *s, a_struct flags, int *len_res)
 		*len_res += ft_putstr("(null)");
 }
 
-void	ft_putwchr(wchar_t *s, a_struct flags, int *len_res)
+void	ft_putwchr(wchar_t *s, t_struct flags, int *len_res)
 {
 	int i;
 

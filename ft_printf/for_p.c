@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	for_p2(a_struct flags, int len, int *len_res)
+void	for_p2(t_struct flags, int len, int *len_res)
 {
 	if (!flags.minus && !flags.nul && flags.precision != -1)
 		*len_res += ft_putstr("0x");
@@ -31,7 +31,7 @@ void	for_p2(a_struct flags, int len, int *len_res)
 	}
 }
 
-int		for_p(a_struct flags, int len)
+int		for_p(t_struct flags, int len)
 {
 	int len_res;
 

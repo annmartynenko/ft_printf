@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	for_flags_unistr(a_struct flags, int *len_res, int *len, wchar_t *arr)
+void	for_flags_unistr(t_struct flags, int *len_res, int *len, wchar_t *arr)
 {
 	int i;
 
@@ -41,7 +41,7 @@ void	for_flags_unistr(a_struct flags, int *len_res, int *len, wchar_t *arr)
 		n_time((flags.width), len_res, '0');
 }
 
-void	uni_str(wchar_t *arr, a_struct flags, int *len_res)
+void	uni_str(wchar_t *arr, t_struct flags, int *len_res)
 {
 	int i;
 	int len;

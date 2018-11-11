@@ -57,7 +57,7 @@ unsigned long long *j)
 	return (len);
 }
 
-int		ft_itoa_base(long long n, int base, int letter, a_struct flags)
+int		ft_itoa_base(long long n, int base, int letter, t_struct flags)
 {
 	int					len;
 	long long			nb;

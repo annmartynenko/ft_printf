@@ -30,7 +30,7 @@ void	ft_putn(unsigned long n, int *len_res)
 	}
 }
 
-void	ft_putunslnbr(unsigned long int n, a_struct flags, int *len_res)
+void	ft_putunslnbr(unsigned long int n, t_struct flags, int *len_res)
 {
 	int				len;
 	long long int	j;
@@ -45,7 +45,7 @@ void	ft_putunslnbr(unsigned long int n, a_struct flags, int *len_res)
 		n_time((flags.width - len), len_res, ' ');
 }
 
-void	ft_putunsnbr(unsigned int n, a_struct flags, int *len_res)
+void	ft_putunsnbr(unsigned int n, t_struct flags, int *len_res)
 {
 	int				len;
 	long long int	j;
@@ -81,7 +81,7 @@ void	if_nb_n(long long *nb, int *len_res, long long n)
 	}
 }
 
-void	ft_putlnbr(long long int n, a_struct flags, int *len_res)
+void	ft_putlnbr(long long int n, t_struct flags, int *len_res)
 {
 	int				len;
 	long long int	nb;
