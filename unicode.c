@@ -96,7 +96,7 @@ void	unicode(wchar_t numb, t_struct flags, int mark, int *len_res)
 		size = 1;
 	if (flags.width > len && !flags.minus && !flags.nul && mark == UNCO)
 		n_time((flags.width - len), len_res, ' ');
-	if (size <= 7)
+	if (size <= 7 || MB_CUR_MAX == 1)
 		*len_res += ft_putchar(value);
 	else if (size <= 11)
 		*len_res += two_bin(value);
