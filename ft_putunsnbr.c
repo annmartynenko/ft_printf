@@ -15,12 +15,6 @@
 
 void	ft_putn(unsigned long n, int *len_res)
 {
-	int				len;
-	long long int	j;
-
-	j = 1;
-	len = 0;
-	len = a_len(n, 10, len, &j);
 	if (n < 10)
 		(*len_res) += ft_putchar((char)(n + '0'));
 	else
@@ -61,6 +55,17 @@ void	if_nb_n(long long *nb, int *len_res, long long n)
 	}
 }
 
+void	ft_put_ln(long long n, int *len_res)
+{
+	if (n < 10)
+		(*len_res) += ft_putchar((char)(n + '0'));
+	else
+	{
+		ft_putn((n / 10), len_res);
+		(*len_res) += ft_putchar((char)(n % 10 + '0'));
+	}
+}
+
 void	ft_putlnbr(long long int n, t_struct flags, int *len_res)
 {
 	int				len;
@@ -70,16 +75,14 @@ void	ft_putlnbr(long long int n, t_struct flags, int *len_res)
 	j = 1;
 	len = 0;
 	nb = n;
+	if (flags.space)
+		flags.sp = 'd';
 	len = a_len(n, 10, len, &j);
 	if_nb_n(&nb, len_res, n);
 	if_flags(flags, len, len_res);
-	if (nb < 10)
-		(*len_res) += ft_putchar((char)(nb + '0'));
-	else
-	{
-		ft_putlnbr((nb / 10), flags, len_res);
-		(*len_res) += ft_putchar((char)(nb % 10 + '0'));
-	}
+	if (flags.plus && n > 0)
+		len_res += ft_putchar('+');
+	ft_put_ln(nb, len_res);
 	if (flags.minus && flags.width > len)
 	{
 		if (flags.plus)

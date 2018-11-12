@@ -47,7 +47,7 @@ void	flags_string_after(t_struct flags, int *len_res, int len)
 		if (flags.precision <= len && flags.precision != -1)
 			n_time((flags.width - flags.precision), len_res, ' ');
 		else if (flags.precision > len && flags.precision != -1)
-			n_time(flags.width, len_res, ' ');
+			n_time(flags.width - len, len_res, ' ');
 	}
 }
 

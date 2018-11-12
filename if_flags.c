@@ -35,7 +35,7 @@ void			if_flags2(t_struct flags, int len, int *len_res)
 			(*len_res) += ft_putchar(' ');
 		n_time((flags.precision - len), len_res, '0');
 	}
-	else if (flags.space && flags.sp == 'd' && !flags.plus && !flags.minus)
+	else if (flags.space && flags.sp == 'd' && !flags.plus)
 		(*len_res) += ft_putchar(' ');
 }
 
@@ -55,7 +55,7 @@ void			if_flags(t_struct flags, int len, int *len_res)
 	len > flags.precision)
 		n_time((flags.width - len), len_res, ' ');
 	else if (flags.width > len && flags.precision != -1 && \
-	flags.width > flags.precision)
+	flags.width > flags.precision && !flags.minus)
 	{
 		n_time((flags.width - flags.precision), len_res, ' ');
 		n_time((flags.precision - len), len_res, '0');
