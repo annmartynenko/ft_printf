@@ -41,9 +41,7 @@ void				*ft_memcpy(void *restrict dst, const void *restrict src, \
 size_t n);
 int					ft_isdigit(int c);
 int					ft_atoi(const char *str);
-int					ft_isalpha(int c);
 void				n_time(int i, int *len_res, char str);
-void				ft_putunsnbr(unsigned int n, t_struct flags, int *len_res);
 int					ft_itoa_base(long long int n, int base, int letter,\
 t_struct flags);
 void				word(char format, va_list ap, t_struct flags, int *len_res);
@@ -88,7 +86,6 @@ int *len_res);
 void				for_hh(char format, va_list ap, t_struct flags,\
 int *len_res);
 void				ft_putwchr(wchar_t *s, t_struct flags, int *len_res);
-int					ft_putwchar(wchar_t c);
 int					for_p(t_struct flags, int len);
 int					print_space(t_struct flags, int len, int base, int letter);
 int					print_nul(t_struct flags, int len, int base, int letter);

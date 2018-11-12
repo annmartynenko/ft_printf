@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int		fill_max(uintmax_t base, uintmax_t n, uintmax_t j, int letter)
 {

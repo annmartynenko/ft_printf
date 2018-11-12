@@ -15,8 +15,8 @@ NAME = libftprintf.a
 SRC = ft_printf.c number.c ft_itoa_base.c ft_putunsnbr.c\
 extra_fun.c unicode.c find_flag.c for_flags.c if_flags.c\
 ft_putstring.c ft_putnumber.c specifier.c ft_strlen.c if_flags_d.c\
-ft_putchar.c ft_putstr.c ft_atoi.c ft_memcpy.c ft_isalpha.c ft_isdigit.c\
-ft_strsub.c ft_putnbr.c ft_putchar_fd.c if_flags_ito.c\
+ft_putchar.c ft_putstr.c ft_atoi.c ft_memcpy.c ft_isdigit.c\
+ft_putnbr.c if_flags_ito.c\
 valid.c not_spec.c ft_itoa_base_int.c ft_itoa_unslong.c\
 ft_itoa_max.c ft_putint.c for_add.c for_p.c
 

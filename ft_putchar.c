@@ -17,9 +17,3 @@ int	ft_putchar(char c)
 	write(1, &c, 1);
 	return (1);
 }
-
-int	ft_putwchar(wchar_t c)
-{
-	write(1, &c, 1);
-	return (1);
-}

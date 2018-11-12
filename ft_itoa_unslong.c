@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int		fill_uns(unsigned long base, unsigned long n, unsigned long j,\
 int letter)

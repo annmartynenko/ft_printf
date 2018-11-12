@@ -29,7 +29,8 @@ void			if_flags_d2(t_struct *flags, int *len, int *len_res)
 		}
 		n_time(((*flags).width - (*len)), len_res, '0');
 	}
-	else if ((*flags).width > (*len) && !(*flags).nul && (*flags).plus != 100 &&\
+	else if ((*flags).width > (*len) && !(*flags).nul &&\
+	(*flags).plus != 100 &&\
 	!(*flags).minus && (*flags).precision == -1)
 	{
 		if ((*flags).plus)

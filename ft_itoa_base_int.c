@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int		fill_int(unsigned int base, unsigned int n, unsigned int j, int letter)
 {

@@ -45,26 +45,6 @@ void	ft_putunslnbr(unsigned long int n, t_struct flags, int *len_res)
 		n_time((flags.width - len), len_res, ' ');
 }
 
-void	ft_putunsnbr(unsigned int n, t_struct flags, int *len_res)
-{
-	int				len;
-	long long int	j;
-
-	j = 1;
-	len = 0;
-	len = a_len(n, 10, len, &j);
-	if_flags(flags, len, len_res);
-	if (n < 10)
-		(*len_res) += ft_putchar((char)(n + '0'));
-	else
-	{
-		ft_putnbr((n / 10), len_res);
-		(*len_res) += ft_putchar((char)(n % 10 + '0'));
-	}
-	if (flags.minus && flags.width > len)
-		n_time((flags.width - len), len_res, ' ');
-}
-
 void	if_nb_n(long long *nb, int *len_res, long long n)
 {
 	if ((*nb) == -922337203685477580.8 * 10)
